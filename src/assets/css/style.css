@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary-color: #85714D;
+  --primary-dark-alt: #54472d3e;
+  --primary-dark: #54472d;
+  --bg-color: #3E3D3D;
+  --alt-color: #4C4740;
+  --shadow: box-shadow: 0px 4px 4px 0px #00000026;
+  --success: #2CC168;
+  --danger: #C12C2C;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.big-display {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: -0.3000000119px;
+}
+
+.heading-six {
+  font-size: 20px;
+}
+
+.heading-five {
+  font-size: 22px;
+}
+
+.heading-two {
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: -0.3000000119px;
+  text-align: left;
+}
+
+.base-text {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.3000000119px;
+}
+
+.btn {
+  padding: 8px 16px;
+  color: #ffffff;
+  transition: all 300ms ease-out;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark) !important;
+}
+
+.btn-secondary {
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-dark-alt);
+}
+
+.btn-link {
+  transition: all 300ms ease-out;
+}
+
+.btn-send {
+  transition: all 300ms ease-out;
+}
+
+.btn-send:hover,
+.btn-link:hover {
+  opacity: 0.5;
+}
+
+.footer-group h5 {
+  color: var(--primary-color);
+}
+
+.footer-links {
+  line-height: 40px;
+}
+
+.footer {
+  background-color: #000000;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.bg-danger-color {
+  background-color: var(--danger);
+}
+
+.bg-success-color {
+  background-color: var(--success);
+}
+
+.bg-alt-color {
+  background-color: var(--alt-color);
+}
+
+.imageone {
+  height: 740px !important;
+  width: 720px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../images/building-image.png) !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+.hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../images/learn-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+.imageone,
+.about-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../images/about-bg.svg);
+  height: 1363px;
+  width: 720px;
+  z-index: 1000;
+  margin-top: -20%;
+  background-blend-mode: overlay;
+}
+
+.quest {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../images/quest-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  height: 528px;
+}
+
+.single-quest img {
+  width: 800px;
+}
+
+.append {
+  position: relative;
+}
+.append input {
+  color: #000000;
+}
+.append button {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translate(-3%, -50%);
+}
+
+.table-auto td {
+  padding: 16px 0px;
+  border-bottom: 1px solid #808080;
+}
+
+.card {
+  position: relative;
+  background-color: var(--primary-dark-alt);
+  border: 1px solid var(--primary-color);
+}
+.card img {
+  height: 243px;
+  width: 357px;
+}
+
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    font-size: 12px !important;
+  }
+  .logo {
+    width: 96px;
+  }
+  .big-display {
+    font-size: 20px;
+  }
+  .quest {
+    background-position-x: center;
+  }
+  .heading-five {
+    font-size: 12px;
+  }
+  .footer-group .heading-five {
+    font-size: 16px;
+  }
+  .about-header {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url(../images/about-bg.svg);
+    z-index: 1000;
+    margin-top: -20%;
+    background-size: contain;
+    background-position-y: -60%;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,17 +1,64 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './assets/css/style.css' //custom styling
+import './assets/css/tailwind.css' //tailwind framework
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import Home from './pages/Home';
+import Layout from './layouts/Layout';
+import About from './pages/About';
+import Learn from './pages/Learn';
+import Quest from './pages/Quest';
+import Help from './pages/Help';
+import Faqs from './pages/Faqs';
+import Markets from './pages/Markets';
+import Careers from './pages/Careers';
+
+
+const router = createBrowserRouter([
+  {
+    element : <Layout />,
+    children : [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/learn-with-omazoya",
+        element: <Learn />,
+      },
+      {
+        path: "/quests",
+        element: <Quest />,
+      },
+      {
+        path: "/help",
+        element: <Help />,
+      },
+      {
+        path: "/faqs",
+        element: <Faqs />,
+      },
+      {
+        path: "/markets",
+        element: <Markets />,
+      },
+      {
+        path: "/careers",
+        element: <Careers />,
+      }
+    ]
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
