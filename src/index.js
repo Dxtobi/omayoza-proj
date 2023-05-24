@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/css/style.css' //custom styling
+import './assets/css/input.css' //custom styling
 import './assets/css/tailwind.css' //tailwind framework
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import Home from './pages/Home';
@@ -12,11 +13,17 @@ import Help from './pages/Help';
 import Faqs from './pages/Faqs';
 import Markets from './pages/Markets';
 import Careers from './pages/Careers';
+import Signup from './pages/auth_pages/Signup';
+import Login from './components/auth/Login';
+import Dashboard from './pages/dashboard/Index';
+import NotFoundPage from './components/NotFound';
+import App from './app';
 
 
 const router = createBrowserRouter([
   {
-    element : <Layout />,
+    element: <Layout />,
+    errorElement:<NotFoundPage/>,
     children : [
       {
         path: "/",
@@ -49,7 +56,20 @@ const router = createBrowserRouter([
       {
         path: "/careers",
         element: <Careers />,
-      }
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      
     ]
   },
 ]);
@@ -58,7 +78,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
 

@@ -38,8 +38,8 @@ const Header = () => {
 
             {/* cta buttons */}
             <div className='flex z-[3000]'>
-                <button className="btn btn-secondary heading-six mr-4">Log in</button>
-                <button className="btn btn-primary heading-six">Sign up</button>
+                <Link to={'/login'} className="btn btn-secondary heading-six mr-4">Log in</Link>
+                <Link to={'/signup'} className="btn btn-primary heading-six">Sign up</Link>
             </div>
         </nav>
         {/* navbar ends here */}
