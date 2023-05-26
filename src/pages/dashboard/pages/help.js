@@ -1,11 +1,12 @@
 import React from 'react';
+import Help from '../../Help';
 
-function Help(props) {
+function HelpComp(props) {
     return (
         <div>
-            help
+            <Help />
         </div>
     );
 }
 
-export default Help;
+export default HelpComp;

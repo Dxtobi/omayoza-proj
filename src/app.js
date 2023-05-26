@@ -17,8 +17,14 @@ import Dashboard from './pages/dashboard/Index';
 import NotFoundPage from './components/NotFound';
 import Footer from './layouts/Footer';
 import Header from './layouts/Header';
+import Setting from './pages/dashboard/pages/Setting';
+import Investment from './pages/dashboard/pages/Investment';
+import LearnComp from './pages/dashboard/pages/Learn';
+import DashboardComp from './pages/dashboard/pages/Dashboard';
+import HelpComp from './pages/dashboard/pages/help';
 
 const children = [
+   
     {
       path: "/",
       element: <Home />,
@@ -59,26 +65,35 @@ const children = [
       path: "/login",
       element: <Login />,
     },
-    {
-      path: "/dashboard/*",
-      element: <Dashboard />,
-    },
-    {
-        path: '*',
-        element:<NotFoundPage/>
-    }
+    
+    
+    
+    
+   
+   
   ]
 
 const App = () => {
   return (
       <Router>
           <Header />
-            <Routes>
+          <Routes>
+          
+              
                 {
                     children.map((e, i) => (
                         <Route key={(i+e.path).toString()} path={e.path} element={e.element} />
                     ))
-                    }
+              }
+              <Route path="/dashboard" element={<Dashboard />}>
+                  <Route path="/dashboard/" element={<Investment />} />
+                  <Route path="/dashboard/settings" element={<Setting />} />
+                  <Route path="/dashboard/help" element={<HelpComp />} />
+                  <Route path="/dashboard/learn" element={<LearnComp />} />
+                  <Route path="/dashboard/index" element={<DashboardComp />} />
+                  
+              </Route>
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           <Footer />
     </Router>

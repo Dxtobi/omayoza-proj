@@ -34,7 +34,10 @@ const handleChange = (event) => {
                     <img src="r101.png" alt="" className='w-[100%] h-full object-cover'/>
                 </div>
                 <div className='flex flex-col items-center gap-3 w-1/2 px-10 justify-center'>
-                <div className='font-bold text-2xl'>Sign Up</div>
+            <div className='font-bold text-2xl'>Sign Up</div>
+            {
+              //this should be i separate component
+            }
                 <div className='w-full '>
                       <div className='gap-4 flex items-center  justify-between my-4'>
                         <SignupInput type='text' value={state.email} name='first' on_change={handleChange} placeholder='first name'/>

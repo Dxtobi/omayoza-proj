@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Route, Routes, useLocation  } from 'react-router-dom';
+import { Outlet, Route, Routes, useLocation  } from 'react-router-dom';
 
 import Sidebar from '../../components/dashboard/Sidebar';
 import Investment from './pages/Investment';
@@ -56,14 +56,19 @@ const Dashboard = () => {
       <section className='flex gap-4'>
               <Sidebar urls={state._links} username={state.username} />
               <div className='w-[80%] px-10'>
-              <Routes>
-                      <Route path={`/`} exec element={<Investment />} />
-                      <Route path={`/dashboard/index`} element={<MainDashboard/>} />
-                      <Route path={`/dashboard/settings`} element={<Setting/>} />
-                      <Route path={`/dashboard/help`} element={<Help />} />
-                      <Route path={`/dashboard/learn`} element={<Learn/>} />
-              </Routes>
-                
+              
+                    <Outlet />
+            
+                  {/*
+                      
+                      <Routes>
+                          <Route path={`/`} exec element={<Investment />} />
+                          <Route path={`/dashboard/index`} element={<MainDashboard />} />
+                          <Route path={`/dashboard/settings`} element={<Setting />} />
+                          <Route path={`/dashboard/help`} element={<Help />} />
+                          <Route path={`/dashboard/learn`} element={<Learn />} />
+                      </Routes>
+                  */}
               </div>
       </section>
     </>
