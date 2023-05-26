@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { SignupInput } from '../../components'
 
-const Login = ({handleSubmit}) => {
+function Login( {handleSubmit} ) {
+  console.log(handleSubmit)
     const [state, setState] = useState({
         email: '',
         password: '',

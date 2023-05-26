@@ -35,7 +35,7 @@ const Component3 = ({handleChangeComp, data}) => {
 
 
     return (
-        <div className='flex flex-col gap-10  mt-5  '>
+        <div className='flex flex-col gap-10  mt-5  w-[80%]'>
             <div className='font-bold text-2xl'>RISK EVALUATION</div>
             <div className='flex flex-col gap-5 '>
                 <p>What are you willing to risk?</p>
@@ -47,27 +47,21 @@ const Component3 = ({handleChangeComp, data}) => {
                             value={data.type}
                             className="text-gray-800 bg-white hover:bg-gray-200 w-1/3"
                             >
-                            <div className="flex items-center">
-                                <div
-                                className="w-4 h-4 rounded-full mr-2"
-                                style={{ background: 'gray' }}
-                                ></div>
-                                <span>{data.type}</span>
-                            </div>
+                            {data.type}
                             </option>
                     ))}
                 </select>
 
                 <div className="flex gap-4 w-full">
                 {state._invest_knowledge_data.map((e, index) => (
-                        <div key={index} value={e.type} className="flex flex-col gap-3 w-1/4">
+                        <div key={index} className="flex flex-col gap-3 w-1/4">
                             <div className='bg-[#85714d] p-4 text-center'>
                                 {e.top}
                             </div>
                             <div className='bg-[#0d0d0d] p-4 text-center'>
                                 {e.bottom}
                             </div>
-                            <SquareRadioInput option={e.text} handleChange={handleChangeComp} selected={ data?.comp3} />
+                            <SquareRadioInput option={e.type} handleChange={handleChangeComp} selected={ data?.comp3} />
                         </div>
                     ))}
                

@@ -17,7 +17,7 @@ const Dashboard = () => {
     const [state, setState] = useState({
        
         loading: false,
-        username:'Joeph Morgaan',
+        username:'Full Name',
         _links: [
             {
                 name: 'Dashboard',

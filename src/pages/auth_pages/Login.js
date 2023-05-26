@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import LoginForm from '../../components/auth/Login';
 
-import Login from '../../components/auth/Login';
+
 
 const Signup = () => {
     const [state, setState] = useState({
@@ -12,24 +13,19 @@ const Signup = () => {
       });
     
   
-  const handleSubmit = (data) => {
+  const handleSubmitFunc = (data) => {
     setState(prevState => ({ ...prevState, loading: true, data:{...state.data, ...data} }));
-    console.log(data)
-    //on success
-    if (state.next === 3) {
-      //submit //all data would be in state.data
-      console.log(state.data)
-      return
-    }
-    setState(prevState => ({...prevState, loading:false, next:state.next+1}));
+   
+  
+   
   }
 
 
   return (
     <>
       <section>
-              <Login handleSubmit={handleSubmit} />
-       
+        
+        <LoginForm handleSubmit={handleSubmitFunc} />
       </section>
     </>
   )
