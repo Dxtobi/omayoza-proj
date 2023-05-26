@@ -51,7 +51,7 @@ const Component5 = ({handleChangeComp, data}) => {
                         state._invest_knowledge_data.map((e, i) => (
                             <div key={e.text} className='w-full md:w-1/3 flex flex-rol md:flex-rol gap-3'>
                                 <img src={e.img} alt={e.img} className='w-[160px] object-cover h-[160px]' />
-                                <div className='flex w-full gap-5 items-start mt-5'>
+                                <div className='flex w-full gap-5 items-start mt-5 md:flex-col'>
                                     <SquareRadioInput option={e.text} handleChange={handleChangeComp} selected={ data?.comp5} />
                                     <p>{e.text}</p>
                                 </div>
@@ -70,7 +70,7 @@ const Component5 = ({handleChangeComp, data}) => {
                         state.months.map((e, i) => (
                             <div key={e.text} className='w-full md:w-1/3 flex flex-rol md:flex-rol gap-3'>
                                 <img src={e.img} alt={e.img} className='w-[160px] object-cover h-[160px]' />
-                                <div className='flex w-full gap-5 items-start mt-5'>
+                                <div className='flex w-full gap-5 items-start mt-5 md:flex-col'>
                                     <SquareRadioInput option={e.text} handleChange={handleChangeComp} selected={ data?.comp5} />
                                     <p>{e.text}</p>
                                 </div>
