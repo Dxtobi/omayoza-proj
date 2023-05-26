@@ -7,10 +7,10 @@ const Modal = ({ isOpen, onClose }) => {
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 ">
           <div className="fixed inset-0 bg-gray-500 opacity-50"></div>
-          <div className="relative bg-black p-10 w-1/4 flex flex-col gap-4">
+          <div className="relative bg-black p-10 w-[80%] flex flex-col gap-4">
             {/* Modal Content */}
            
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 '>
                 <div>Deposit Funds</div>
                 <SignupInput on_change={(e) => e} value={''} />  
                 <div>How much would you like to invest?</div>          

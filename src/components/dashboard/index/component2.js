@@ -34,16 +34,18 @@ const Component2 = ({handleChangeComp, data}) => {
             <div className='font-bold text-2xl'>PURPOSE OF INVESTING</div>
             <div className='flex flex-col gap-5 bg-[#85714d37] p-5'>
                 <p>Set a target with Omayoza</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {state._invest_knowledge_data.map((e, i) => (
-                    <div key={e.text} className="flex flex-col  ">
-                    <img src={e.img} alt={e.img} className="w-full h-[200px] object-cover" />
-                    <div className="flex items-center my-5 gap-3">
-                        <SquareRadioInput option={e.text} handleChange={handleChangeComp} selected={data?.comp2} />
-                        <p>{e.text}</p>
-                    </div>
-                    </div>
-                ))}
+                <div className='flex flex-col md:flex-row  gap-4 justify-start md:justify-between'>
+                    {
+                        state._invest_knowledge_data.map((e, i) => (
+                            <div key={e.text} className='w-full md:w-1/3 flex flex-rol md:flex-rol gap-3'>
+                                <img src={e.img} alt={e.img} className='w-[160px] object-cover h-[160px]' />
+                                <div className='flex w-full gap-5 items-start mt-5'>
+                                    <SquareRadioInput option={e.text} handleChange={handleChangeComp} selected={ data?.comp2} />
+                                    <p>{e.text}</p>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
                     
             </div>

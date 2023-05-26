@@ -20,7 +20,7 @@ const Component3 = ({handleChangeComp, data}) => {
         }));
       };
     return (
-        <div className='flex flex-col gap-10  mt-5  w-[80%]'>
+        <div className='flex flex-col gap-10  mt-5   w-full md:w-[80%]'>
             <div className='font-bold text-2xl'>FINANCIAL STATUS</div>
             <div className='flex flex-col gap-5 '>
              
@@ -41,13 +41,8 @@ const Component3 = ({handleChangeComp, data}) => {
                     value=''
                             className="text-gray-800 bg-white hover:bg-gray-200 w-1/3"
                             >
-                            <div className="flex items-center">
-                                <div
-                                className="w-4 h-4 rounded-full mr-2"
-                                style={{ background: 'gray' }}
-                                ></div>
-                                <span>Occupation</span>
-                            </div>
+                            
+                              Occupation=
                             </option>
                     {state._invest_knowledge_data.map((data, index) => (
                         <option

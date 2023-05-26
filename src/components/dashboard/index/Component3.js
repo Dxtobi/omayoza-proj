@@ -25,17 +25,13 @@ const Component3 = ({handleChangeComp, data}) => {
                 bottom: '20%',
                 type:'500k-1M'
             },
-            {
-                top: '80%',
-                bottom: '20%',
-                type:'1M-Above'
-            },
+        
         ]
     })
 
 
     return (
-        <div className='flex flex-col gap-10  mt-5  w-[80%]'>
+        <div className='flex flex-col gap-10  mt-5  w-full md:w-[80%]'>
             <div className='font-bold text-2xl'>RISK EVALUATION</div>
             <div className='flex flex-col gap-5 '>
                 <p>What are you willing to risk?</p>
