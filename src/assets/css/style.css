@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --primary-color: #85714D;
   --primary-dark-alt: #54472d3e;
@@ -36,6 +37,7 @@ body {
 
 .heading-five {
   font-size: 22px;
+  width: 760px;
 }
 
 .heading-two {
@@ -51,7 +53,7 @@ body {
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 25px;
   letter-spacing: -0.3000000119px;
 }
 
@@ -164,9 +166,11 @@ body {
 .append {
   position: relative;
 }
+
 .append input {
   color: #000000;
 }
+
 .append button {
   position: absolute;
   right: 3%;
@@ -180,35 +184,43 @@ body {
 }
 
 .card {
-  position: relative;
+  /* position: relative; */
   background-color: var(--primary-dark-alt);
   border: 1px solid var(--primary-color);
 }
+
 .card img {
   height: 243px;
   width: 357px;
 }
 
 @media (max-width: 768px) {
+
   .btn-primary,
   .btn-secondary {
     font-size: 12px !important;
   }
+
   .logo {
     width: 96px;
   }
+
   .big-display {
     font-size: 20px;
   }
+
   .quest {
     background-position-x: center;
   }
+
   .heading-five {
     font-size: 12px;
   }
+
   .footer-group .heading-five {
     font-size: 16px;
   }
+
   .about-header {
     background-color: rgba(0, 0, 0, 0.7);
     background-image: url(../images/about-bg.svg);

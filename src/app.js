@@ -22,61 +22,82 @@ import Investment from './pages/dashboard/pages/Investment';
 import LearnComp from './pages/dashboard/pages/Learn';
 import DashboardComp from './pages/dashboard/pages/Dashboard';
 import HelpComp from './pages/dashboard/pages/help';
+import UserLayout from './layouts/UserLayout';
+import UserDashboard from './components/shared/UserDashboard';
+import WebsiteLayout from './layouts/WebsiteLayout';
+import WebsiteDashboard from './components/shared/WebsiteDashboard';
 
 const children = [
-   
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/about",
-      element: <About />,
-    },
-    {
-      path: "/learn-with-omazoya",
-      element: <Learn />,
-    },
-    {
-      path: "/quests",
-      element: <Quest />,
-    },
-    {
-      path: "/help",
-      element: <Help />,
-    },
-    {
-      path: "/faqs",
-      element: <Faqs />,
-    },
-    {
-      path: "/markets",
-      element: <Markets />,
-    },
-    {
-      path: "/careers",
-      element: <Careers />,
-    },
-    {
-      path: "/signup",
-      element: <Signup />,
-    },
-    {
-      path: "/login",
-      element: <Login />,
-    },
-    
-    
-    
-    
-   
-   
-  ]
+
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/learn-with-omazoya",
+    element: <Learn />,
+  },
+  {
+    path: "/quests",
+    element: <Quest />,
+  },
+  {
+    path: "/help",
+    element: <Help />,
+  },
+  {
+    path: "/faqs",
+    element: <Faqs />,
+  },
+  {
+    path: "/markets",
+    element: <Markets />,
+  },
+  {
+    path: "/careers",
+    element: <Careers />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+
+
+]
 
 const App = () => {
   return (
-      <Router>
-          <Header />
+    <Router>
+      <Routes >
+        {/* USER LAYOUT ROUES */}
+        {/* <Route path="/" element={<UserLayout />}>
+          <Route index element={<UserDashboard />} />
+        </Route> */}
+
+
+        {/* WEBSITE LAYOUT ROUTES */}
+        <Route path="/" element={<WebsiteLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/markets" element={<Markets />} />
+          <Route path="/learn-with-omazoya" element={<Learn />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/quests" element={<Quest />} />
+        </Route>
+
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+      </Routes>
+
+      {/* <Header />
           <Routes>
           
               
@@ -95,7 +116,7 @@ const App = () => {
               </Route>
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
-          <Footer />
+          <Footer /> */}
     </Router>
   );
 };
